@@ -1,9 +1,11 @@
 .side-main
   .side-head
-    %p.user-name masa
+    %p.user-name
+      = current_user.name
     .icon
       %i.far.fa-edit
-      %i.fa.fa-cog
+      = link_to edit_user_path(current_user) do
+        %i.fa.fa-cog
   .side-body
     %p.group-name techcamp
     %p.message まだメッセージがありません
