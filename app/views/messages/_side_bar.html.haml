@@ -3,7 +3,8 @@
     %p.user-name
       = current_user.name
     .icon
-      %i.far.fa-edit
+      = link_to new_group_path do
+        %i.far.fa-edit
       = link_to edit_user_path(current_user) do
         %i.fa.fa-cog
   .side-body
