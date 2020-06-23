@@ -39,12 +39,14 @@
     background-color: #2f3e51;
     height: calc(100vh - 100px);
     padding: 20px 20px 0;
-    .group-name{
+    a{
       font-size: 15px;
-    }
-    .message{
-      font-size: 11px;
-      margin-bottom: 40px;
+      color: #ffffff;
+      text-decoration: none;
+      .Group-message{
+        font-size: 11px;
+        margin-bottom: 40px;
+      }
     }
   }
 }
@@ -68,12 +70,12 @@
       // ヘッダーの左側
 
     .head-left{
-      .group-display{
+      .group-name{
         padding-top: 35px;
         color: #333333;
         font-size: 20px;
       }
-      .member{
+      .group-member{
         font-size: 12px;
         color: #999999;
         padding-top: 15px;
@@ -83,19 +85,20 @@
       // ヘッダーの中の右側
 
     .head-right{
-      .edit-btn{
-        border: 1px solid #38aef0;
-        
-        margin-top: 28px;
-        padding: 0 20px;
-        a{
-          text-decoration: none;
-          font-size: 16px;
-          color: #38aef0;
-          width: 40px;
-          height: 72px;
+      a{
+        text-decoration: none;
+        font-size: 16px;
+        color: #38aef0;
+        width: 40px;
+        height: 72px;
+        .edit-btn{
+          border: 1px solid #38aef0;
+          
+          margin-top: 28px;
+          padding: 0 20px;
         }
       }
+    
     }
   }
 
@@ -143,14 +146,14 @@
     height: 90px;
     background-color: #d2d2d2;
     padding: 0 40px;
-    .new-message{
+    form{
       height: 90px;
       display: flex;
       align-items: center;
       .input-space{
         width: 100%;
         position: relative;
-        .input-text{
+        .type-text{
           padding-left: 10px;
           width: 100%;
           height: 50px;
@@ -159,15 +162,16 @@
 
       // 　アイコン
 
-        .icon{
+        i{
           position: absolute;
           top: 15px;
           right: 10px;
-          .select-file{
-            display: none;
-          }
         }
-      }
+        .select-file{
+          display: none;
+        }
+        
+    }
 
       // 送信ボタン
 
