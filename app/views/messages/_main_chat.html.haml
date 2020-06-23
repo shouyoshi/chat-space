@@ -1,24 +1,24 @@
 .main
   .main-head
     .head-left
-      %p.group-display test
-      %p.member Member : masa
+      .group-name
+        = @group.name
+      .group-member
+        Member:
+        - @group.users.each do |user|
+          = user.name
     .head-right
-      %p.edit-btn
-        %a{href: "#"} Edit
+      = link_to edit_group_path(@group) do
+        %p.edit-btn
+          Edit
   .main-body
-    .body-message
-      .first-message
-        %p.name masa
-        %p.date 2019/11/20(wed) 17:43:01
-      .main-message
-        %p.message おはよう！
+    = render @messages
   .main-foot
     .form
-      %form.new-message
+      = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
         .input-space
-          %input{type: "text", class: "input-text", placeholder: "type a message"}
-          %label{class: "icon"}
-            %i.far.fa-image
-            %input{type: "file", class: "select-file"}
-        %input{type: "submit", class: "send", value: "送信"}
+          = f.text_field :content, placeholder: 'type a message', class: 'type-text'
+          = f.label :image do
+            = icon('far', 'image', class: 'icon')
+            = f.file_field :image, class: 'select-file'
+        = f.submit 'Send', class: 'send'

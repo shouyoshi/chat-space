@@ -3,9 +3,15 @@
     %p.user-name
       = current_user.name
     .icon
-      %i.far.fa-edit
-      = link_to edit_user_path(current_user) do
+      = link_to new_group_path do
+        %i.far.fa-edit
+      = link_to edit_user_path(current_user.id) do
         %i.fa.fa-cog
   .side-body
-    %p.group-name techcamp
-    %p.message まだメッセージがありません
+    - current_user.groups.each do |group|
+      .Group
+        = link_to group_messages_path(group.id) do
+          .Group-name
+            = group.name 
+          .Group-message  
+            = group.show_last_message

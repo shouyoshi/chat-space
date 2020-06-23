@@ -1,0 +1,9 @@
+.body-message
+  .first-message
+    %p.name
+      = message.user.name
+    %p.date
+      = message.created_at
+  .main-message
+    %p.message 
+      = message.content
