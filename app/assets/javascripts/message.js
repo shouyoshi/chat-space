@@ -61,5 +61,8 @@ $(function(){
       $(".send").prop('disabled', false);
       $('form')[0].reset();
     })
+    .fail(function(){
+      alert("値を入力してください");
+    })
     });
 });
