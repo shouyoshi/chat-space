@@ -55,7 +55,7 @@ $(function() {
       alert("通信エラーです");
     });
   });
-  $("#UserSearchResult").on("click", ".ChatMember__add", function(){
+  $("#UserSearchResult").on("click", ".ChatMember_add", function(){
     const userName = $(this).attr("data-user-name");
     console.log(userName);
     const userId = $(this).attr("data-user-id");
