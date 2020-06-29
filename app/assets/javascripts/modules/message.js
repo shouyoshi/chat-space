@@ -1,11 +1,9 @@
 $(function(){
-  let last_message_id = $('.body-message:last').data("message-id");
-  console.log(last_message_id)
-
+  
   function buildingHTML(message){
     if (message.image){
       let html =
-       `<div class="body-message">
+       `<div class="body-message"　data-message-id=${message.id}>
          <div class="first-message">
           <p class="name">
             ${message.user_name}
@@ -25,7 +23,7 @@ $(function(){
            return html;
     }else{
       let html =
-       `<div class="body-message">
+       `<div class="body-message" data-message-id=${message.id}>
          <div class="first-message">
           <p class="name">
             ${message.user_name}
@@ -68,4 +66,6 @@ $(function(){
       alert("値を入力してください");
     })
     });
+
+    
 });
