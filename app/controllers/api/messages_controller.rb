@@ -1,5 +1,6 @@
 class Api::MessagesController < ApplicationController
   def index
+    # binding-pry
     group = Group.find(params[:group_id])
     # ajaxで送られてくる最後のメッセージのid番号を変数に代入
     last_message_id = params[:id]
