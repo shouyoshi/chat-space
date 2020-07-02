@@ -1,6 +1,6 @@
 $(function(){
   
-  function buildingHTML(message){
+  function buildHTML(message){
     if (message.image){
       let html =
        `<div class="body-message"　data-message-id=${message.id}>
@@ -45,7 +45,7 @@ $(function(){
 
 let reloadMessages = function() {
   //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
-  let last_message_id = $('.MessageBox:last').data("message-id");
+  let last_message_id = $('.body-message:last').data("message-id");
   $.ajax({
     //ルーティングで設定した通り/groups/id番号/api/messagesとなるよう文字列を書く
     url: "api/messages",

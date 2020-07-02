@@ -86,17 +86,16 @@
 
     .head-right{
       a{
+        display: block;
         text-decoration: none;
         font-size: 16px;
         color: #38aef0;
-        width: 40px;
-        height: 72px;
-        .edit-btn{
-          border: 1px solid #38aef0;
-          
-          margin-top: 28px;
-          padding: 0 20px;
-        }
+        width: 72px;
+        height: 40px;
+        border: 1px solid #38aef0;
+        padding: 0 20px;
+        margin: 28px 0;
+        line-height: 40px;
       }
     
     }

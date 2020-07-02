@@ -1,8 +1,4 @@
 = form_with model: group, local: true do |f|
-  .SettingGroupForm__errors
-    -# %h2 10件のエラーが発生しました
-    %ul
-      -# %li nameを入力してください
   .SettingGroupForm__field
     .SettingGroupForm__leftField
       = f.label :name, "グループ名", class: 'SettingGroupForm__label'

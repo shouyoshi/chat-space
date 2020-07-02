@@ -18,9 +18,8 @@ $(function(){
            </p>
            <img class="Message__image" src="${message.image}">
            </div>
-           </div> 
-           `
-           return html;
+           </div>`
+          return html;
     }else{
       let html =
        `<div class="body-message" data-message-id=${message.id}>
@@ -37,11 +36,10 @@ $(function(){
            ${message.content}
            </p>
            </div>
-           </div> 
-           `
-           return html;
+           </div> `
+          return html;
+      };
     }
-  }
   
   $('.Form').on('submit', function(e){
     e.preventDefault()
