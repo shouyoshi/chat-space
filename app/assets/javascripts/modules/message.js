@@ -41,6 +41,15 @@ $(function(){
       };
     }
   
+   $('.body-message').click(function(){
+    let url = $(this).attr('action');
+    $.ajax({
+       url: url,
+       type: "POST",
+       dataType: 'json'
+     })
+ })
+
   $('.Form').on('submit', function(e){
     e.preventDefault()
     let formData = new FormData(this);
@@ -65,5 +74,4 @@ $(function(){
     })
     });
 
-    
 });
